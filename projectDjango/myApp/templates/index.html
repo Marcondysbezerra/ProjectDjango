@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Teste de Porta</title>
+</head>
+<body>
+{% block content %}
+    <h1>Teste de Porta</h1>
+    <p>Para verificar se a porta está aberta insira o IP ou HOST e a porta desejada.</p>
+    <div>
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.ip_address_form}}
+            {{form.port_form}}
+            <input type="submit" value="Test">
+        </form>
+        {% if result == 0 %}
+            <p>Porta {{port }} está aberta para o host {{host}}</p>
+        {% else %}
+            <p>Porta {{port }} está fechada para o host {{host}}</p>
+        {% endif %}
+    </div>
+{% endblock %}
+</body>
+</html>

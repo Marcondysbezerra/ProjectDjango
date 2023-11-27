@@ -1,6 +1,6 @@
 import socket
 from django.shortcuts import render
-from projectDjango.myApp.forms import FormPortTest, validacao_ipv4
+from projectDjango.myApp.forms import FormPortTest
 
 
 # Create your views here.
@@ -19,13 +19,13 @@ def pagina_inicial(request):
             connection = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             connection.settimeout(1)
             result = connection.connect_ex((host, port))
+            # connection.close()
 
             context = {
                 'form': form,
                 'result': result,
                 'host': host,
                 'port': port,
-                'invalid': validacao_ipv4
             }
             # redirect to a new URL:
             return render(request, 'index.html', context=context)

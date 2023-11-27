@@ -27,22 +27,18 @@
             </div>
             <div>
                 {% if result == 0 %}
-                {% bootstrap_alert "Porta aberta" alert_type='success' %}
+                    {% bootstrap_alert "Porta aberta" alert_type='success' %}
                 {% elif result == 10035 or result == 10061%}
-                {% bootstrap_alert "Porta fechada" alert_type='danger' %}
+                    {% bootstrap_alert "Porta fechada" alert_type='danger' %}
                 {% else %}
-                {% bootstrap_alert "Verifique se foi iserido um endereço IP ou Host Válido" alert_type='danger' %}
+                    {% bootstrap_alert "Verifique se foi iserido um endereço IP ou Host Válido" alert_type='danger' %}
                 {% endif %}
             </div>
             <div class="">
                 <form action="" method="POST">
-                    <div class="form-row">
-                        <div class="col-7">
-                            {% csrf_token %}
-                            {%bootstrap_form form%}
-                            {% buttons %}
-                        </div>
-                    </div>
+                    {% csrf_token %}
+                    {%bootstrap_form form%}
+                    {% buttons %}
                     <div>
                         <button type="submit" class="btn btn-primary">Testar</button>
                     </div>

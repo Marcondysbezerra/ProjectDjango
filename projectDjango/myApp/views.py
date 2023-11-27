@@ -28,9 +28,9 @@ def pagina_inicial(request):
                 'port': port,
             }
             # redirect to a new URL:
-            return render(request, 'index.html', context=context)
+            return render(request, 'ipv4/index.html', context=context)
 
     # if a GET (or any other method) we'll create a blank form
     else:
         form = FormPortTest()
-    return render(request, "index.html", {"form": form})
+    return render(request, "ipv4/index.html", {"form": form})

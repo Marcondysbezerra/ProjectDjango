@@ -8,4 +8,6 @@ class FormPortTest(forms.Form):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields["ip_address_form"].widget.attrs.update({"class": "form-control"})
+        self.fields["ip_address_form"].widget.attrs.update({"placeholder": "IP/Host"})
         self.fields["port_form"].widget.attrs.update({"class": "form-control"})
+        self.fields["port_form"].widget.attrs.update({"placeholder": "Porta"})

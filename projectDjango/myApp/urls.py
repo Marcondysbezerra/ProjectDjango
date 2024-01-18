@@ -3,5 +3,8 @@ from . import views
 
 
 urlpatterns = [
-    path('teste_ipv4', views.pagina_inicial, name='teste_ipv4')
+    path('', views.teste_ipv4),
+    path('teste-ipv4/', views.teste_ipv4),
+    path('meuip/', views.your_ip),
+
 ]

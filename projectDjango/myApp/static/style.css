@@ -1,0 +1,28 @@
+/* Container de mensagem */
+#container-msg {
+    height: 75px;
+}
+/* Container Adsense */
+#container-adsense {
+    height: 100px;
+}
+/* Container Artigo */
+#container-artigo {
+    height: 300px;
+}
+#row-msg {
+    height: 50%;
+}
+a {
+    text-decoration: none;
+}
+
+/* Icones do foter*/
+i.bi {
+    font-size: 25px;
+    color: white;
+    font-family: sans-serif;
+
+p{
+	font-family:Arial, Helvetica, sans-serif;
+	}

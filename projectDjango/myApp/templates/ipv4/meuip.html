@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}Seu IP - Descubra qual o seu endereço IP{% endblock %}
+</head>
+<body>
+    {%block content%}
+        <div class="container">
+            <div class="row justify-content-center align-items-center vh-100">
+                <div class="col-12">
+                    <input class="form-control" type="text" value="{{ip}}">
+                    <input class="btn btn-primary" ype="submit" value="Copiar">
+                </div>
+            </div>
+        </div>
+    {%endblock%}
+</body>
+</html>
